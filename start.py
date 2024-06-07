@@ -1,15 +1,9 @@
 import numpy as np
-from sklearn.linear_model import LinearRegression
+import pandas
 
-X = np.array([
-    [1, 1],
-    [1, 2],
-    [2, 2],
-    [2, 3]
-])
+print("Це формула гіпотезі реалізована на python")
 
-y = np.dot(X, np.array([1, 2])) + 3
 
-regressor = LinearRegression().fit(X, y)
-
-print(regressor.predict(np.array([[3, 5]])))
+def h(a, b, X):
+    result = a + b * X
+    return result
