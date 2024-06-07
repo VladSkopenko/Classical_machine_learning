@@ -1,9 +1,13 @@
 import numpy as np
 import pandas
 
-print("Це формула гіпотезі реалізована на python")
+
+def h(a, b, x):
+    result = a + b * x
+    return result
 
 
-def h(a, b, X):
-    result = a + b * X
+def func_loss(predict_value, true_value):
+    quantity_values = len(true_value)
+    result = np.sum((predict_value - true_value) ** 2) / (2 * quantity_values)
     return result
